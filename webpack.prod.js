@@ -35,7 +35,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            title: 'project-ready-react-boilerplate',
+            title: 'fcc-markdown-previewer',
             inject: true,
             template: path.resolve(__dirname, './src/index.html'),
         }),
