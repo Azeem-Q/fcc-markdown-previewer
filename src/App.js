@@ -9,7 +9,10 @@ class App extends React.Component {
 
     render() {
         return (
-            <div></div>
+            <div>
+                <div id="editor"></div>
+                <div id="previewer"></div>
+            </div>
         );
     }
 }
