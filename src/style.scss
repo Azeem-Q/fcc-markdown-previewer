@@ -1,0 +1,14 @@
+#editor {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    height: 50vh;
+}
+
+#preview {
+    @extend #editor;
+    width: 90%;
+    border: solid 2px black;
+    height: auto;
+    background-color: rgb(204, 236, 236);
+}
