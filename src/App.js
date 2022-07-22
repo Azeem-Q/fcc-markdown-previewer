@@ -2,6 +2,12 @@ import React from 'react';
 import './style.scss';
 import Markdown from 'marked-react';
 
+Markdown.setOptions({
+    gfm: true,
+    breaks: true,
+    tables: true,
+});
+
 const initialText = `# Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
