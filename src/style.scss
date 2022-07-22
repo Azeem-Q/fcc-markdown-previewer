@@ -12,3 +12,50 @@
     height: auto;
     background-color: rgb(204, 236, 236);
 }
+
+tr {
+    border-top: 1px solid #c6cbd1;
+    background: #fff;
+}
+
+th,
+td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+table tr:nth-child(2n) {
+    background: #f6f8fa;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid rgb(95, 94, 94);
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+
+blockquote:before {
+    color: rgb(95, 94, 94);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 90%;
+}
+
+code,
+pre {
+    background: black;
+    color: white;
+}
