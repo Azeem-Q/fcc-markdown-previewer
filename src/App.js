@@ -1,11 +1,13 @@
 import React from 'react';
 import './style.scss';
 import Markdown from 'marked-react';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/an-old-hope.css';
 
-Markdown.setOptions({
-    gfm: true,
-    breaks: true,
-    tables: true,
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+    });
 });
 
 const initialText = `# Welcome to my React Markdown Previewer!
@@ -62,7 +64,7 @@ const Editor = (props) => {
 const Previewer = (props) => {
     return (
         <div id="preview">
-            <Markdown>{props.result}</Markdown>
+            <Markdown breaks={true}>{props.result}</Markdown>
         </div>
     );
 };
