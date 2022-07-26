@@ -70,7 +70,11 @@ const Previewer = (props) => {
 };
 
 const Toolbar = (props) => {
-    return <div id="toolbar" style={props.style}></div>;
+    return (
+        <div id="toolbar" style={props.style}>
+            <p>{props.title}</p>
+        </div>
+    );
 };
 
 class App extends React.Component {
@@ -91,10 +95,15 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Toolbar style={{ width: '85%' }} />
-                <Editor text={this.state.input} onChange={this.handleChange} />
+                <div>
+                    <Toolbar style={{ width: '85%' }} title="Editor" />
+                    <Editor
+                        text={this.state.input}
+                        onChange={this.handleChange}
+                    />
+                </div>
                 <br />
-                <Toolbar style={{ width: '90%' }}/>
+                <Toolbar style={{ width: '90%' }} title="Previewer" />
                 <Previewer result={this.state.input} />
             </div>
         );
