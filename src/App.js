@@ -69,6 +69,10 @@ const Previewer = (props) => {
     );
 };
 
+const Toolbar = (props) => {
+    return <div id="toolbar" style={props.style}></div>;
+};
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -87,7 +91,10 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <Toolbar style={{ width: '85%' }} />
                 <Editor text={this.state.input} onChange={this.handleChange} />
+                <br />
+                <Toolbar style={{ width: '90%' }}/>
                 <Previewer result={this.state.input} />
             </div>
         );
